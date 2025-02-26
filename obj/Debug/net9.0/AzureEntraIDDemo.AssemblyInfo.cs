@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AzureEntraIDDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+565b2ac60fdf3b4789fe724e81bffbea0184807e")]
 [assembly: System.Reflection.AssemblyProductAttribute("AzureEntraIDDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AzureEntraIDDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
