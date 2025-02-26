@@ -1,0 +1,6 @@
+@AzureEntraIDDemo_HostAddress = http://localhost:5097
+
+GET {{AzureEntraIDDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
