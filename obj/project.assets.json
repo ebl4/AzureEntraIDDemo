@@ -2,16 +2,16 @@
   "version": 3,
   "targets": {
     "net9.0": {
-      "Azure.Core/1.44.1": {
+      "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
-          "System.ClientModel": "1.1.0",
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "System.ClientModel": "1.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1",
-          "System.Memory.Data": "6.0.0",
+          "System.Memory.Data": "1.0.2",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Text.Encodings.Web": "6.0.0",
-          "System.Text.Json": "6.0.10",
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.7.2",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
@@ -85,7 +85,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.0": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
@@ -190,12 +190,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -495,46 +493,6 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
-        }
-      },
-      "Microsoft.Graph/5.70.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Graph.Core": "3.2.3"
-        },
-        "compile": {
-          "lib/net5.0/Microsoft.Graph.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Microsoft.Graph.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Graph.Core/3.2.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.3.1",
-          "Microsoft.IdentityModel.Validators": "8.3.1",
-          "Microsoft.Kiota.Abstractions": "1.16.4",
-          "Microsoft.Kiota.Authentication.Azure": "1.16.4",
-          "Microsoft.Kiota.Http.HttpClientLibrary": "1.16.4",
-          "Microsoft.Kiota.Serialization.Form": "1.16.4",
-          "Microsoft.Kiota.Serialization.Json": "1.16.4",
-          "Microsoft.Kiota.Serialization.Multipart": "1.16.4",
-          "Microsoft.Kiota.Serialization.Text": "1.16.4"
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Graph.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Graph.Core.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Identity.Abstractions/8.1.1": {
@@ -864,120 +822,6 @@
           }
         }
       },
-      "Microsoft.Kiota.Abstractions/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "7.0.1",
-          "Tavis.UriTemplates": "2.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Kiota.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Kiota.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Authentication.Azure/1.16.4": {
-        "type": "package",
-        "dependencies": {
-          "Azure.Core": "1.44.1",
-          "Microsoft.Kiota.Abstractions": "1.16.4"
-        },
-        "compile": {
-          "lib/net8.0/Microsoft.Kiota.Authentication.Azure.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Kiota.Authentication.Azure.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Http.HttpClientLibrary/1.16.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Kiota.Abstractions": "1.16.4"
-        },
-        "compile": {
-          "lib/net8.0/Microsoft.Kiota.Http.HttpClientLibrary.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Kiota.Http.HttpClientLibrary.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Serialization.Form/1.16.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Kiota.Abstractions": "1.16.4"
-        },
-        "compile": {
-          "lib/net8.0/Microsoft.Kiota.Serialization.Form.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Kiota.Serialization.Form.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Serialization.Json/1.16.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Kiota.Abstractions": "1.16.4"
-        },
-        "compile": {
-          "lib/net8.0/Microsoft.Kiota.Serialization.Json.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Kiota.Serialization.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Serialization.Multipart/1.16.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Kiota.Abstractions": "1.16.4"
-        },
-        "compile": {
-          "lib/net8.0/Microsoft.Kiota.Serialization.Multipart.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Kiota.Serialization.Multipart.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Kiota.Serialization.Text/1.16.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Kiota.Abstractions": "1.16.4"
-        },
-        "compile": {
-          "lib/net8.0/Microsoft.Kiota.Serialization.Text.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Kiota.Serialization.Text.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.OpenApi/1.6.17": {
         "type": "package",
         "compile": {
@@ -991,11 +835,11 @@
           }
         }
       },
-      "System.ClientModel/1.1.0": {
+      "System.ClientModel/1.0.0": {
         "type": "package",
         "dependencies": {
           "System.Memory.Data": "1.0.2",
-          "System.Text.Json": "6.0.9"
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/net6.0/System.ClientModel.dll": {
@@ -1008,20 +852,23 @@
           }
         }
       },
-      "System.Diagnostics.DiagnosticSource/7.0.1": {
+      "System.Diagnostics.DiagnosticSource/6.0.1": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net7.0/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Formats.Asn1/9.0.0": {
@@ -1066,23 +913,21 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "System.Memory.Data/6.0.0": {
+      "System.Memory.Data/1.0.2": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "6.0.0"
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.6.0"
         },
         "compile": {
-          "lib/net6.0/System.Memory.Data.dll": {
+          "lib/netstandard2.0/System.Memory.Data.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Memory.Data.dll": {
+          "lib/netstandard2.0/System.Memory.Data.dll": {
             "related": ".xml"
           }
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -1170,28 +1015,16 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "System.Text.Encodings.Web/6.0.0": {
+      "System.Text.Encodings.Web/4.7.2": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
         "compile": {
-          "lib/net6.0/System.Text.Encodings.Web.dll": {
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Text.Encodings.Web.dll": {
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {
             "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll": {
-            "assetType": "runtime",
-            "rid": "browser"
           }
         }
       },
@@ -1219,29 +1052,20 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
-      },
-      "Tavis.UriTemplates/2.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Tavis.UriTemplates.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Tavis.UriTemplates.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "Azure.Core/1.44.1": {
-      "sha512": "YyznXLQZCregzHvioip07/BkzjuWNXogJEVz9T5W6TwjNr17ax41YGzYMptlo2G10oLCuVPoyva62y0SIRDixg==",
+    "Azure.Core/1.38.0": {
+      "sha512": "IuEgCoVA0ef7E4pQtpC3+TkPbzaoQfa77HlfJDmfuaJUCVJmn7fT0izamZiryW5sYUFKizsftIxMkXKbgIcPMQ==",
       "type": "package",
-      "path": "azure.core/1.44.1",
+      "path": "azure.core/1.38.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.core.1.44.1.nupkg.sha512",
+        "azure.core.1.38.0.nupkg.sha512",
         "azure.core.nuspec",
         "azureicon.png",
         "lib/net461/Azure.Core.dll",
@@ -1302,10 +1126,10 @@
         "lib/netstandard2.0/Azure.Security.KeyVault.Secrets.xml"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.0": {
-      "sha512": "bs+1Pq3vQdS2lTyxNUd9fEhtMsq3eLUpK36k2t56iDMVrk6OrAoFtvrQrTK0Y0OetTcJrUkGU7hBlf+ORzHLqQ==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.5": {
+      "sha512": "8J04KPX5NCo6j5AjY/rgeLTceMBJ8Sq4k+YNxN/7hCrbCH1iwHVw7VGGvlCscj615ewMX3jYDmxxLdutbSPOcA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/9.0.0",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1314,7 +1138,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.9.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.9.0.5.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -1406,10 +1230,10 @@
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
-    "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
-      "sha512": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
+    "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+      "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
       "type": "package",
-      "path": "microsoft.bcl.asyncinterfaces/6.0.0",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1422,9 +1246,13 @@
         "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
-        "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
-        "useSharedDesignerContext.txt"
+        "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
@@ -1913,44 +1741,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Graph/5.70.0": {
-      "sha512": "5WF5M4rakCk7qdo8hRyUGYNRDrQSop2e81kkmOU20DETwO84bEYwGEWKz7zxffWP6sZ9td3NLHWb325w8IfHhA==",
-      "type": "package",
-      "path": "microsoft.graph/5.70.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "lib/net5.0/Microsoft.Graph.dll",
-        "lib/net5.0/Microsoft.Graph.xml",
-        "lib/netstandard2.0/Microsoft.Graph.dll",
-        "lib/netstandard2.0/Microsoft.Graph.xml",
-        "lib/netstandard2.1/Microsoft.Graph.dll",
-        "lib/netstandard2.1/Microsoft.Graph.xml",
-        "microsoft.graph.5.70.0.nupkg.sha512",
-        "microsoft.graph.nuspec"
-      ]
-    },
-    "Microsoft.Graph.Core/3.2.3": {
-      "sha512": "rF+hiEX9vPBkgAyVcxqaok2H/MS3ZEgzDahrak2Xxq6cC0+hiWPYuXB8TmldjxU0SxHnm9e7hBKbEV9xlGJkLg==",
-      "type": "package",
-      "path": "microsoft.graph.core/3.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "lib/net462/Microsoft.Graph.Core.dll",
-        "lib/net462/Microsoft.Graph.Core.xml",
-        "lib/net6.0/Microsoft.Graph.Core.dll",
-        "lib/net6.0/Microsoft.Graph.Core.xml",
-        "lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "lib/netstandard2.0/Microsoft.Graph.Core.xml",
-        "microsoft.graph.core.3.2.3.nupkg.sha512",
-        "microsoft.graph.core.nuspec"
-      ]
-    },
     "Microsoft.Identity.Abstractions/8.1.1": {
       "sha512": "iDtpmzj9m3dMnVKU7KDKo1Ubz1O1PDVBs2NyeHIvr5gv7KrTNAzaB3g+odfZK6opkXdODRWBM60pkCyP8Ag4mw==",
       "type": "package",
@@ -2364,159 +2154,6 @@
         "microsoft.identitymodel.validators.nuspec"
       ]
     },
-    "Microsoft.Kiota.Abstractions/1.0.0": {
-      "sha512": "dIKEk64G4t1W3kRthba0xEKHa774ba2o4m7SKg9PBoFEf82Pn5IiCfv8jBuhpjwgKAmTpu8NoTwVBIiKV6oN+A==",
-      "type": "package",
-      "path": "microsoft.kiota.abstractions/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "README.md",
-        "lib/netstandard2.0/Microsoft.Kiota.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Abstractions.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Abstractions.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Abstractions.xml",
-        "microsoft.kiota.abstractions.1.0.0.nupkg.sha512",
-        "microsoft.kiota.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Authentication.Azure/1.16.4": {
-      "sha512": "T9DUUy2l5dus7HVdsM6tJpszfDKfekWNcecN5B58NXSeTT+BkapN/54YcXL475/BXXT/oi0jlZkJ/SQ9RC07Ug==",
-      "type": "package",
-      "path": "microsoft.kiota.authentication.azure/1.16.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/net5.0/Microsoft.Kiota.Authentication.Azure.xml",
-        "lib/net6.0/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/net6.0/Microsoft.Kiota.Authentication.Azure.xml",
-        "lib/net8.0/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/net8.0/Microsoft.Kiota.Authentication.Azure.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Authentication.Azure.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Authentication.Azure.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Authentication.Azure.xml",
-        "microsoft.kiota.authentication.azure.1.16.4.nupkg.sha512",
-        "microsoft.kiota.authentication.azure.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Http.HttpClientLibrary/1.16.4": {
-      "sha512": "5qf2xS5gXgO842V/tTiNqEt5VaMENWm23KMznl8SUl+UWkBeN55KKY0abRrQrw56igkwJJG6ReBwZoPQtwqHDg==",
-      "type": "package",
-      "path": "microsoft.kiota.http.httpclientlibrary/1.16.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net462/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net462/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/net5.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net5.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/net6.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net6.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/net8.0-browser1.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net8.0-browser1.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/net8.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/net8.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Http.HttpClientLibrary.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Http.HttpClientLibrary.xml",
-        "microsoft.kiota.http.httpclientlibrary.1.16.4.nupkg.sha512",
-        "microsoft.kiota.http.httpclientlibrary.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Serialization.Form/1.16.4": {
-      "sha512": "P/fnIzYON3qArN3a3dFtSXKxG2hf1K8Iq8RLesQIc0naMwFDYq4SSE3JcRNJ9YQQUOHKcoeRdP29BpkCFkbrhg==",
-      "type": "package",
-      "path": "microsoft.kiota.serialization.form/1.16.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/net5.0/Microsoft.Kiota.Serialization.Form.xml",
-        "lib/net6.0/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/net6.0/Microsoft.Kiota.Serialization.Form.xml",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Form.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Form.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Form.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Form.xml",
-        "microsoft.kiota.serialization.form.1.16.4.nupkg.sha512",
-        "microsoft.kiota.serialization.form.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Serialization.Json/1.16.4": {
-      "sha512": "WXRv4dhjwDcky+27MX6Q4L96s38ChhPSqdgOENhDsEHAZiN/YYjq1IBvQk31fnxJraqyJR/IbG84c51B1gNhJw==",
-      "type": "package",
-      "path": "microsoft.kiota.serialization.json/1.16.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/net5.0/Microsoft.Kiota.Serialization.Json.xml",
-        "lib/net6.0/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/net6.0/Microsoft.Kiota.Serialization.Json.xml",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Json.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Json.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Json.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Json.xml",
-        "microsoft.kiota.serialization.json.1.16.4.nupkg.sha512",
-        "microsoft.kiota.serialization.json.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Serialization.Multipart/1.16.4": {
-      "sha512": "QgY2Ckeipd53H5dyPv9v8far2BAPMa4dVNnLFd/m3uS7nQWi9ammB3Aj/cBArIeUvG1bznahCf9Tx2bDdtPGhQ==",
-      "type": "package",
-      "path": "microsoft.kiota.serialization.multipart/1.16.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/net5.0/Microsoft.Kiota.Serialization.Multipart.xml",
-        "lib/net6.0/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/net6.0/Microsoft.Kiota.Serialization.Multipart.xml",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Multipart.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Multipart.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Multipart.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Multipart.xml",
-        "microsoft.kiota.serialization.multipart.1.16.4.nupkg.sha512",
-        "microsoft.kiota.serialization.multipart.nuspec"
-      ]
-    },
-    "Microsoft.Kiota.Serialization.Text/1.16.4": {
-      "sha512": "TkThf7kvYwcGLW9OlxCkfppjJzV/YOrUfZhK8YYKshPwfOrsw4AkH35oUx/seC9pxxzb9xKecMHJ2GstunD53Q==",
-      "type": "package",
-      "path": "microsoft.kiota.serialization.text/1.16.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/net5.0/Microsoft.Kiota.Serialization.Text.xml",
-        "lib/net6.0/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/net6.0/Microsoft.Kiota.Serialization.Text.xml",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/net8.0/Microsoft.Kiota.Serialization.Text.xml",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/netstandard2.0/Microsoft.Kiota.Serialization.Text.xml",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Text.dll",
-        "lib/netstandard2.1/Microsoft.Kiota.Serialization.Text.xml",
-        "microsoft.kiota.serialization.text.1.16.4.nupkg.sha512",
-        "microsoft.kiota.serialization.text.nuspec"
-      ]
-    },
     "Microsoft.OpenApi/1.6.17": {
       "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
       "type": "package",
@@ -2532,10 +2169,10 @@
         "microsoft.openapi.nuspec"
       ]
     },
-    "System.ClientModel/1.1.0": {
-      "sha512": "UocOlCkxLZrG2CKMAAImPcldJTxeesHnHGHwhJ0pNlZEvEXcWKuQvVOER2/NiOkJGRJk978SNdw3j6/7O9H1lg==",
+    "System.ClientModel/1.0.0": {
+      "sha512": "I3CVkvxeqFYjIVEP59DnjbeoGNfo/+SZrCLpRz2v/g0gpCHaEMPtWSY0s9k/7jR1rAsLNg2z2u1JRB76tPjnIw==",
       "type": "package",
-      "path": "system.clientmodel/1.1.0",
+      "path": "system.clientmodel/1.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2546,33 +2183,31 @@
         "lib/net6.0/System.ClientModel.xml",
         "lib/netstandard2.0/System.ClientModel.dll",
         "lib/netstandard2.0/System.ClientModel.xml",
-        "system.clientmodel.1.1.0.nupkg.sha512",
+        "system.clientmodel.1.0.0.nupkg.sha512",
         "system.clientmodel.nuspec"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/7.0.1": {
-      "sha512": "T9SLFxzDp0SreCffRDXSAS5G+lq6E8qP4knHS2IBjwCdx2KEvGnGZsq7gFpselYOda7l6gXsJMD93TQsFj/URA==",
+    "System.Diagnostics.DiagnosticSource/6.0.1": {
+      "sha512": "KiLYDu2k2J82Q9BJpWiuQqCkFjRBWVq4jDzKKWawVi9KWzyD0XG3cmfX0vqTQlL14Wi9EufJrbL0+KCLTbqWiQ==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/7.0.1",
+      "path": "system.diagnostics.diagnosticsource/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Diagnostics.DiagnosticSource.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Diagnostics.DiagnosticSource.targets",
-        "lib/net462/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net462/System.Diagnostics.DiagnosticSource.xml",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net461/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.xml",
         "lib/net6.0/System.Diagnostics.DiagnosticSource.dll",
         "lib/net6.0/System.Diagnostics.DiagnosticSource.xml",
-        "lib/net7.0/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net7.0/System.Diagnostics.DiagnosticSource.xml",
         "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll",
         "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.7.0.1.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
         "system.diagnostics.diagnosticsource.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2652,27 +2287,22 @@
         "version.txt"
       ]
     },
-    "System.Memory.Data/6.0.0": {
-      "sha512": "ntFHArH3I4Lpjf5m4DCXQHJuGwWPNVJPaAvM95Jy/u+2Yzt2ryiyIN04LAogkjP9DeRcEOiviAjQotfmPq/FrQ==",
+    "System.Memory.Data/1.0.2": {
+      "sha512": "JGkzeqgBsiZwKJZ1IxPNsDFZDhUvuEdX8L8BDC8N3KOj+6zMcNU28CNN59TpZE/VJYy9cP+5M+sbxtWJx3/xtw==",
       "type": "package",
-      "path": "system.memory.data/6.0.0",
+      "path": "system.memory.data/1.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.Memory.Data.targets",
-        "buildTransitive/netcoreapp3.1/_._",
+        "CHANGELOG.md",
+        "DotNetPackageIcon.png",
+        "README.md",
         "lib/net461/System.Memory.Data.dll",
         "lib/net461/System.Memory.Data.xml",
-        "lib/net6.0/System.Memory.Data.dll",
-        "lib/net6.0/System.Memory.Data.xml",
         "lib/netstandard2.0/System.Memory.Data.dll",
         "lib/netstandard2.0/System.Memory.Data.xml",
-        "system.memory.data.6.0.0.nupkg.sha512",
-        "system.memory.data.nuspec",
-        "useSharedDesignerContext.txt"
+        "system.memory.data.1.0.2.nupkg.sha512",
+        "system.memory.data.nuspec"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -2852,31 +2482,28 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Encodings.Web/6.0.0": {
-      "sha512": "Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+    "System.Text.Encodings.Web/4.7.2": {
+      "sha512": "iTUgB/WtrZ1sWZs84F2hwyQhiRH6QNjQv2DkwrH+WP6RoFga2Q1m3f9/Q7FG8cck8AdHitQkmkXSY8qylcDmuA==",
       "type": "package",
-      "path": "system.text.encodings.web/6.0.0",
+      "path": "system.text.encodings.web/4.7.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.Text.Encodings.Web.targets",
-        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Text.Encodings.Web.dll",
         "lib/net461/System.Text.Encodings.Web.xml",
-        "lib/net6.0/System.Text.Encodings.Web.dll",
-        "lib/net6.0/System.Text.Encodings.Web.xml",
-        "lib/netcoreapp3.1/System.Text.Encodings.Web.dll",
-        "lib/netcoreapp3.1/System.Text.Encodings.Web.xml",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
         "lib/netstandard2.0/System.Text.Encodings.Web.dll",
         "lib/netstandard2.0/System.Text.Encodings.Web.xml",
-        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
-        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.6.0.0.nupkg.sha512",
+        "lib/netstandard2.1/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.1/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.4.7.2.nupkg.sha512",
         "system.text.encodings.web.nuspec",
-        "useSharedDesignerContext.txt"
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Text.Json/9.0.0": {
@@ -2986,27 +2613,14 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "Tavis.UriTemplates/2.0.0": {
-      "sha512": "GbetWNcPIaXvWtanHlBqlEp2KflFrsJf8RBNXmI8Yyeft9CSGxNrcsoKWEiEzyrn7gGVQ25ZC6ep9UfWPR0Otw==",
-      "type": "package",
-      "path": "tavis.uritemplates/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Tavis.UriTemplates.dll",
-        "tavis.uritemplates.2.0.0.nupkg.sha512",
-        "tavis.uritemplates.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.5",
       "Microsoft.AspNetCore.OpenApi >= 9.0.2",
-      "Microsoft.Graph >= 5.70.0",
       "Microsoft.Identity.Web >= 3.7.1",
-      "Microsoft.Identity.Web.UI >= 3.7.1",
-      "Microsoft.Kiota.Abstractions >= 1.0.0"
+      "Microsoft.Identity.Web.UI >= 3.7.1"
     ]
   },
   "packageFolders": {
@@ -3015,11 +2629,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Edson\\source\\repos\\AzureEntraIDDemo\\AzureEntraIDDemo.csproj",
+      "projectUniqueName": "C:\\Projetos\\AzureEntraIDDemo\\AzureEntraIDDemo.csproj",
       "projectName": "AzureEntraIDDemo",
-      "projectPath": "C:\\Users\\Edson\\source\\repos\\AzureEntraIDDemo\\AzureEntraIDDemo.csproj",
+      "projectPath": "C:\\Projetos\\AzureEntraIDDemo\\AzureEntraIDDemo.csproj",
       "packagesPath": "C:\\Users\\Edson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Edson\\source\\repos\\AzureEntraIDDemo\\obj\\",
+      "outputPath": "C:\\Projetos\\AzureEntraIDDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Edson\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3054,13 +2668,13 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[9.0.5, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.2, )"
-          },
-          "Microsoft.Graph": {
-            "target": "Package",
-            "version": "[5.70.0, )"
           },
           "Microsoft.Identity.Web": {
             "target": "Package",
@@ -3069,10 +2683,6 @@
           "Microsoft.Identity.Web.UI": {
             "target": "Package",
             "version": "[3.7.1, )"
-          },
-          "Microsoft.Kiota.Abstractions": {
-            "target": "Package",
-            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -3100,10 +2710,11 @@
   },
   "logs": [
     {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.Kiota.Abstractions from 1.16.4 to 1.0.0. Reference the package directly from the project to select a different version. \r\n AzureEntraIDDemo -> Microsoft.Graph 5.70.0 -> Microsoft.Graph.Core 3.2.3 -> Microsoft.Kiota.Abstractions (>= 1.16.4) \r\n AzureEntraIDDemo -> Microsoft.Kiota.Abstractions (>= 1.0.0)",
-      "libraryId": "Microsoft.Kiota.Abstractions",
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Identity.Web' 3.7.1 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-rpq8-q44m-2rpg",
+      "libraryId": "Microsoft.Identity.Web",
       "targetGraphs": [
         "net9.0"
       ]

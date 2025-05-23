@@ -1,37 +1,36 @@
-using AzureEntraIDDemo.Application.Interfaces;
-using AzureEntraIDDemo.Application.Services;
-using AzureEntraIDDemo.Domain.Interfaces;
-using AzureEntraIDDemo.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Configuração do Azure AD
-builder.Services.AddMicrosoftIdentityWebApiAuthentication(
-    builder.Configuration, "AzureAd")
-    .EnableTokenAcquisitionToCallDownstreamApi() // Habilita a aquisição de tokens para chamar APIs downstream
-    //.AddMicrosoftGraph(builder.Configuration.GetSection("GraphApi")) // Adiciona suporte ao Microsoft Graph
-    .AddInMemoryTokenCaches(); // Armazena tokens em cache na memória
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
 
-// Registrar o GraphServiceClient
-builder.Services.AddScoped(sp =>
-{
-    var tokenAcquisition = sp.GetRequiredService<ITokenAcquisition>();
-    var scopes = builder.Configuration.GetSection("GraphApi:Scopes").Get<string[]>();
-    var authProvider = new GraphAuthenticationProvider(tokenAcquisition, scopes);
-    return new GraphServiceClient(authProvider);
-});
-
-// Registrar o GraphRepository
-builder.Services.AddScoped<IGraphRepository, GraphRepository>();
+builder.Services.AddAuthorization();
 
 // Registrar o UserService
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:44486")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+
 var app = builder.Build();
 
+app.UseHttpsRedirection();
+
 app.UseAuthentication();
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,35 +1,31 @@
-using AzureEntraIDDemo.Application.Interfaces;
+using System.Security.Claims;
 using AzureEntraIDDemo.Domain.Entities;
-using AzureEntraIDDemo.Domain.Interfaces;
-
-namespace AzureEntraIDDemo.Application.Services;
 
 public class UserService : IUserService
 {
-    private readonly IGraphRepository _graphRepository;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public UserService(IGraphRepository graphRepository)
+    public UserService(IHttpContextAccessor httpContextAccessor)
     {
-        _graphRepository = graphRepository;
+        _httpContextAccessor = httpContextAccessor;
     }
 
-    public async Task<User> GetUserAsync()
+    public Task<User> GetUserInfoAsync()
     {
-        return await _graphRepository.GetUserAsync();
-    }
+        var user = _httpContextAccessor.HttpContext?.User;
+        
+        if (user == null)
+        {
+            throw new InvalidOperationException("User not authenticated");
+        }
 
-    public async Task<IEnumerable<SignIn>> GetRecentSignInsAsync()
-    {
-        return await _graphRepository.GetRecentSignInsAsync();
-    }
+        var userInfo = new User
+        {
+            Name = user.FindFirstValue("name") ?? user.FindFirstValue(ClaimTypes.Name) ?? "Unknown",
+            Email = user.FindFirstValue("preferred_username") ?? user.FindFirstValue(ClaimTypes.Email) ?? "Unknown",
+            TenantId = user.FindFirstValue("tid") ?? "Unknown"
+        };
 
-    public async Task<IEnumerable<User>> GetUsersAsync()
-    {
-        return await _graphRepository.GetUsersAsync();
-    }
-
-    public async Task<IEnumerable<Group>> GetGroupsAsync()
-    {
-        return await _graphRepository.GetGroupsAsync();
+        return Task.FromResult(userInfo);
     }
 }
